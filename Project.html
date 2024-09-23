@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <style>
+        .body-collapse a{
+            text-decoration: none;
+            color: #000;
+        }
+        .body-collapse a i{
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3><span>USER</span></h3>
+        </div>
+        
+        <div class="side-content">
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="">
+                            <img src="img/dashboards.png" alt="">
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="employee.html">
+                            <img src="img/teamwork.png" alt="">
+                            <small>Employee</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <img src="img/execute.png" alt="">
+                            <small>Project</small>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="body-collapse">
+                                <a href=""><i class="fa-solid fa-circle-chevron-right"></i>Project 1</a>
+                            </div>
+                          </div>                          
+                    </li>
+                    <li>
+                       <a href="">
+                            <img src="img/clipboard.png" alt="">
+                            <small>Tasks</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <img src="img/profit-report.png" alt="">
+                            <small>Reporting</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <style>
+            .top-bars{
+                height: 40px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.1s ease;
+                cursor: pointer;
+            }
+            .top-bars img{
+                width: 20px;
+                margin-right: 8px;
+                height: 20px;
+            }
+            .top-bars small{
+                font-size: 16px;
+            }
+            .top-bars:hover{
+                border-bottom: 2px solid black;
+            }
+            .table-sec table{
+                width: 100%;
+            }
+            .table-sec table th{
+                padding: 10px;
+            }
+.button-task{
+  background: none;
+  border-radius: 0.9em;
+  border: hidden;
+  cursor: pointer;
+  padding: 10px;
+  transition: all ease-in-out 0.2s;
+  font-size: 16px;
+}
+
+.button-task span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: 600;
+}
+
+.button-task:hover {
+  background-color: #f2f2f2;
+}
+.completed{
+    padding: 8px;
+    font-size: 12px;
+    border: hidden;
+    border-radius: 5px;
+    outline: none;
+    background-color: green;
+    color: #fff;
+}
+.completed i{
+    margin-right: 8px;
+}
+.to-do{
+    padding: 8px;
+    border: hidden;
+    border-radius: 5px;
+    font-size: 12px;
+    outline: none;
+    background-color: gray;
+    color: #fff;
+}
+.to-do i{
+    margin-right: 8px;
+}
+        </style>
+        <main>
+            
+            <div class="page-header">
+                <h1>Project 1</h1>
+                <small>Home / Project 1</small>
+            </div>
+            <div class="container">
+                <div class="row" style="border-bottom: 1px solid #e1e1e1;">
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/school.png" alt="">
+                            <small>Board</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/list-text.png" alt="">
+                            <small>List</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/calendar.png" alt="">
+                            <small>Calendar</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/table.png" alt="">
+                            <small>Table</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/filter.png" alt="">
+                            <small>Filter</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-bars">
+                            <img src="img/people.png" alt="">
+                            <small>Assignees</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container table-sec pt-3 pb-3">
+                <button class="completed"><i class="fa-solid fa-square-check"></i>COMPLETE</button>
+                <table class="mb-3">
+                    <tr>
+                        <th>Name</th>
+                        <th>Assignee</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Comments</th>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(2, 173, 2);">App Development</td>
+                        <td>John Doe</td>
+                        <td>Tomorrow</td>
+                        <td style="color: red;">Urgent</td>
+                        <td><button style="border-radius:5px;background-color: green;color: #fff;border: hidden;padding: 5px;">Completed</button></td>
+                        <td><i class="fa-regular fa-comment"></i></td>
+                    </tr>
+                </table>
+
+<button class="button-task">
+  <span>
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+    </svg>
+    Add Task
+  </span>
+</button> <br>
+<button class="to-do mt-3"><i class="fa-solid fa-circle-notch"></i>TO DO</button>
+<table class="mb-3">
+    <tr>
+        <th>Name</th>
+        <th>Assignee</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Comments</th>
+    </tr>
+    <tr>
+        <td style="color: gray;">Task 1</td>
+        <td><i class="fa-regular fa-user"></i></td>
+        <td><i class="fa-regular fa-calendar"></i></td>
+        <td><i class="fa-regular fa-flag"></i></td>
+        <td><i class="fa-solid fa-circle-notch"></i>To do</td>
+        <td><i class="fa-regular fa-comment"></i></td>
+    </tr>
+    <tr>
+        <td style="color: gray;">Task 2</td>
+        <td><i class="fa-regular fa-user"></i></td>
+        <td><i class="fa-regular fa-calendar"></i></td>
+        <td><i class="fa-regular fa-flag"></i></td>
+        <td><i class="fa-solid fa-circle-notch"></i>To do</td>
+        <td><i class="fa-regular fa-comment"></i></td>
+    </tr>
+</table>
+<button class="button-task">
+    <span>
+      <svg
+        height="24"
+        width="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+      </svg>
+      Add Task
+    </span>
+  </button>
+            </div>
+            
+        </main>
+        
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
