@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                       <a href="">
+                       <a href="report.html">
                             <img src="img/profit-report.png" alt="">
                             <small>Reporting</small>
                         </a>
@@ -113,6 +113,8 @@
                 justify-content: center;
                 transition: all 0.1s ease;
                 cursor: pointer;
+                border: hidden;
+                border-bottom: 2px solid steelblue;
             }
             .top-bars img{
                 width: 20px;
@@ -123,16 +125,16 @@
                 font-size: 16px;
             }
             .top-bars:hover{
-                border-bottom: 2px solid black;
+                border-bottom: 2px solid green;
             }
             .table-sec table{
                 width: 100%;
                 border-collapse: collapse;
             }
-            .table-sec{
-                overflow: scroll;
-            }
             .table-sec table th{
+                padding: 10px;
+            }
+            .table-sec table td{
                 padding: 10px;
             }
 .button-task{
@@ -180,7 +182,11 @@
 .to-do i{
     margin-right: 8px;
 }
-
+@media(min-width:320px) and (max-width:480px){
+    .table-sec{
+                overflow: scroll;
+            }
+}
         </style>
         <main>
             
@@ -229,7 +235,7 @@
                 </div>
 
             </div>
-            <div class="container table-sec pt-3 pb-3">
+            <div class="container table-sec mt-5 pb-3">
                 <button class="completed"><i class="fa-solid fa-square-check"></i>COMPLETE</button>
                 <table class="mb-3">
                     <tr>
